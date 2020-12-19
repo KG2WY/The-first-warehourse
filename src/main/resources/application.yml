@@ -1,0 +1,23 @@
+server:
+  port: 8087
+  #mytis的相关设置
+mybatis:
+#配置映射文件
+  mapper-locations: classpath:mapper/*Mapper.xml
+  #起别名
+  type-aliases-package: com.itgaoshu.springboot1.bean
+  #spring的相关配置
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://localhost:3306/user?serverTimezone=Asia/Shanghai
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123456
+  thymeleaf:
+    cache: false
+    mode: HTML
+    prefix: classpath:/templates/
+    suffix: .html
+    encoding: utf-8
+
